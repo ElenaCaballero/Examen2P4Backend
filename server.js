@@ -14,7 +14,7 @@ server.connection({
               }
 });
 
-mongoose.connect('mongodb://admin:admin@ds027345.mongolab.com:27345/atlasdb');
+mongoose.connect(' mongodb://admin:admin@ds029615.mongolab.com:29615/examenprogra4');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
