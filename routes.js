@@ -7,5 +7,5 @@ exports.endpoints = [
 	{method: 'POST', path: '/v1/register', config: usersController.createUser},
 	{method: 'POST', path: '/v1/login', config: authController.login},
 	{method: 'GET', path: '/v1/logout', config: authController.logout},
-	{method: 'POST', path: 'v1/registergifts', config: giftController.createGift}
+	{method: 'POST', path: '/v1/registergifts', config: giftController.createGift}
 ];
