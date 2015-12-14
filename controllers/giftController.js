@@ -6,8 +6,7 @@ var joi = require('joi');
 exports.createGift = {
   auth: {
     mode:'try',
-    strategy:'session',
-    scope: ['admin']
+    strategy:'session'
   },
   validate: {
     payload: {

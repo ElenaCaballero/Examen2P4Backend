@@ -6,8 +6,7 @@ var joi = require('joi');
 exports.createUser = {
   auth: {
     mode:'try',
-    strategy:'session',
-    scope: ['admin']
+    strategy:'session'
   },
   validate: {
     payload: {
@@ -19,9 +18,7 @@ exports.createUser = {
     console.log(request.payload);
     var newUser = new user({
       username : request.payload.username,
-      password : SHA3(request.payload.password),
-      customer : request.payload.customer,
-      scope : request.payload.scope
+      password : SHA3(request.payload.password)
     });
     newUser.save(function (err) {
       console.log(err);

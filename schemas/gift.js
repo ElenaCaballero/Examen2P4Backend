@@ -9,5 +9,5 @@ var GiftSchema = new mongoose.Schema({
   status : {type: String}
 });
 
-UserSchema.plugin(uniqueValidator);
+GiftSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('Gift', GiftSchema);
