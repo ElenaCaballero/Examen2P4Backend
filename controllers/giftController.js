@@ -19,14 +19,14 @@ exports.createGift = {
   },
   handler: function(request, reply) {
     console.log(request.payload);
-    var newUser = new user({
+    var newGift = new gift({
       nombre : request.payload.nombre,
       descripcion : request.payload.descripcion,
       peso : request.payload.peso,
       destinatario : request.payload.destinatario,
       status : request.payload.status
     });
-    newUser.save(function (err) {
+    newGift.save(function (err) {
       console.log(err);
       if(err){
         return reply(boom.notAcceptable('Destinatary must be unique: ' + err));
